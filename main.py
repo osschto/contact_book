@@ -30,8 +30,8 @@ while True:
                 display_message("           --Контакт не найден--", "red")
                 display_message("           ---------------------", "red")
         elif command == 0:
-            display_message("Досвидания!", "red")
+            display_message("До свидания!", "red")
             break
         else:
              display_message("Ошибка ввода!!!", "red")
-             break
+             continue

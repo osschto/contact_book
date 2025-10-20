@@ -15,8 +15,9 @@ def get_new_contact_info() -> dict:
         if new_name == "" or new_phone == "":
             display_message("Поле не может быть пустым", "red")
             continue
-        elif len(new_name) < 4 or len(new_phone) < 9:
+        elif len(new_name) < 3 or len(new_phone) < 9:
             display_message("Введите корректное значение", "red")
+            continue
         else:break
         
     new_contact = {

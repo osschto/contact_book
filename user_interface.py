@@ -10,13 +10,17 @@ def show_menu() -> str:
 
 def get_new_contact_info() -> dict:
     while True:
-        new_name = str(input("Введите имя нового контакта(Например, Иван Иванов): ")).title()
-        new_phone = str(input("Введите номер нового контакта(Например, 621-52-24): "))
+        new_name = input("Введите имя нового контакта(Например, Иван Иванов): ").title()
+        new_phone = input("Введите номер нового контакта(Например, 621-52-24): ")
         if new_name == "" or new_phone == "":
             display_message("Поле не может быть пустым", "red")
             continue
         elif len(new_name) < 3 or len(new_phone) < 9:
             display_message("Введите корректное значение", "red")
+        elif new_name.isnumeric():
+            display_message("Поле с именем не может быть числом", "red")
+        elif not new_phone.isnumeric():
+            display_message("Поле с номером не может быть строкой", "red")
             continue
         else:break
         

@@ -26,11 +26,11 @@ while True:
                     found = True
                     break
             if not found:
-                display_message("           ---------------------", "red")
-                display_message("           --Контакт не найден--", "red")
-                display_message("           ---------------------", "red")
+                display_message("       ---------------------", "red")
+                display_message("       --Контакт не найден--", "red")
+                display_message("       ---------------------", "red")
         elif command == 0:
-            display_message("До свидания!", "red")
+            display_message("До свидания!", "cyan")
             break
         else:
              display_message("Ошибка ввода!!!", "red")
